@@ -27,7 +27,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro",
+                "proguard-rules.pro"
             )
         }
     }
@@ -61,7 +61,9 @@ dependencies {
 ktlint {
     filter {
         exclude { element ->
-            element.file.path.contains("/build/")
+            val path = element.file.path
+            path.contains("/build/") ||
+                    (!path.contains("/src/commonMain/") && !path.contains("/src/commonTest/"))
         }
     }
 }
