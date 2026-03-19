@@ -66,6 +66,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 timePast = "3시간 전",
                 price = "90,000",
                 likes = 5,
+                status = ProductStatus.RESERVED
             ),
             Product(
                 imageId = R.drawable.img_list_home_6,

@@ -1,6 +1,7 @@
 package com.example.composecarrot.ui
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -11,6 +12,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,6 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.composecarrot.R
 import com.example.composecarrot.model.Product
+import com.example.composecarrot.model.ProductStatus
 
 @Composable
 fun SingleProductCard(
@@ -102,9 +105,27 @@ fun SingleProductCard(
                     fontWeight = FontWeight.Normal,
                 )
             }
-            Text(
-                text = "${productInfo.price}원", fontWeight = FontWeight.SemiBold, fontSize = 17.sp,
-            )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                if (productInfo.status == ProductStatus.RESERVED) Text(
+                    "예약중",
+                    fontSize = 11.sp,
+                    lineHeight = 11.sp,
+                    color = Color.White,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier
+                        .padding(end = 3.dp)
+                        .background(
+                            color = Color(0xff1fa174),
+                            shape = RoundedCornerShape(3.dp)
+                        )
+                        .padding(horizontal = 4.dp, vertical = 3.dp)
+                )
+                Text(
+                    text = "${productInfo.price}원",
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 17.sp,
+                )
+            }
 
         }
         Column(
@@ -137,5 +158,4 @@ fun SingleProductCard(
 
         }
     }
-
 }
