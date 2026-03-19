@@ -18,12 +18,41 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.composecarrot.R
+import com.example.composecarrot.model.BottomNavItem
 import com.example.composecarrot.model.Product
 import com.example.composecarrot.model.ProductStatus
 import com.example.composecarrot.ui.theme.ComposeCarrotTheme
 
 @Composable
 fun ProductListScreen(modifier: Modifier = Modifier) {
+    val navItems = listOf<BottomNavItem>(
+        BottomNavItem(
+            label = "홈",
+            iconId = R.drawable.ic_home,
+            index = 0,
+        ),
+        BottomNavItem(
+            label = "동네생활",
+            iconId = R.drawable.ic_bottombar_life,
+            index = 1,
+        ),
+        BottomNavItem(
+            label = "동네지도",
+            iconId = R.drawable.ic_bottombar_map,
+            index = 2,
+        ),
+        BottomNavItem(
+            label = "채팅",
+            iconId = R.drawable.ic_bottombar_chat,
+            index = 3,
+        ),
+        BottomNavItem(
+            label = "나의 당근",
+            iconId = R.drawable.ic_bottombar_mypage,
+            index = 4,
+        ),
+    )
+
     val productList =
         listOf(
             Product(
@@ -84,6 +113,11 @@ fun ProductListScreen(modifier: Modifier = Modifier) {
         modifier = modifier,
         containerColor = Color.White,
         floatingActionButton = { FloatingButton { } },
+        bottomBar = {
+            BottomNavigationBar(
+                navItems = navItems
+            )
+        }
     ) { innerPadding ->
         Column(
             modifier = Modifier
