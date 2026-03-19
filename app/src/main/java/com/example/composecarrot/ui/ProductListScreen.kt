@@ -19,10 +19,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.composecarrot.R
 import com.example.composecarrot.model.Product
+import com.example.composecarrot.model.ProductStatus
 import com.example.composecarrot.ui.theme.ComposeCarrotTheme
 
 @Composable
-fun MainScreen(modifier: Modifier = Modifier) {
+fun ProductListScreen(modifier: Modifier = Modifier) {
     val productList =
         listOf(
             Product(
@@ -79,7 +80,11 @@ fun MainScreen(modifier: Modifier = Modifier) {
             ),
         )
 
-    Scaffold(modifier = modifier, containerColor = Color.White) { innerPadding ->
+    Scaffold(
+        modifier = modifier,
+        containerColor = Color.White,
+        floatingActionButton = { FloatingButton { } },
+    ) { innerPadding ->
         Column(
             modifier = Modifier
                 .padding(innerPadding)
@@ -112,8 +117,8 @@ fun MainScreen(modifier: Modifier = Modifier) {
 
 @Preview(heightDp = 1000, widthDp = 412)
 @Composable
-private fun MainScreenPreview() {
+private fun ProductListScreenPreview() {
     ComposeCarrotTheme {
-        MainScreen()
+        ProductListScreen()
     }
 }

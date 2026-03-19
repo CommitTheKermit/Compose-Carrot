@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.composecarrot.ui.MainScreen
+import com.example.composecarrot.ui.ProductListScreen
 import com.example.composecarrot.ui.theme.ComposeCarrotTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComposeCarrotTheme {
-                MainScreen()
+                ProductListScreen()
             }
         }
     }
