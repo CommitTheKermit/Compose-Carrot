@@ -16,6 +16,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.example.composecarrot.ui.theme.CarrotOrange
 
 @Composable
 fun FloatingButton(onClick: () -> Unit) {
@@ -23,7 +24,7 @@ fun FloatingButton(onClick: () -> Unit) {
         contentAlignment = Alignment.Center,
         modifier = Modifier
             .clip(RoundedCornerShape(50))
-            .background(Color(0xffff6e10))
+            .background(CarrotOrange)
     ) {
         Row(modifier = Modifier.padding(vertical = 12.dp, horizontal = 14.dp)) {
             Icon(

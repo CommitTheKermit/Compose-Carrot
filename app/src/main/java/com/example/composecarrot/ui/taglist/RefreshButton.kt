@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
+import com.example.composecarrot.ui.theme.BorderGray
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.composecarrot.R
@@ -21,7 +21,7 @@ fun RefreshButton(modifier: Modifier = Modifier) {
         modifier = Modifier
             .clip(CircleShape)
             .border(
-                color = Color(0xffEAEBEF),
+                color = BorderGray,
                 width = 1.dp,
                 shape = CircleShape,
             ).size(34.dp),

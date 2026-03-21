@@ -18,6 +18,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.example.composecarrot.ui.theme.ReservedGreen
+import com.example.composecarrot.ui.theme.TextGray
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -72,14 +74,14 @@ fun SingleProductCard(
                         Text(
                             text = "${productInfo.distance}km",
                             fontSize = 14.sp,
-                            color = Color(0xff868C93),
+                            color = TextGray,
                             fontWeight = FontWeight.Normal,
                         )
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
                             text = "·",
                             fontSize = 14.sp,
-                            color = Color(0xff868C93),
+                            color = TextGray,
                             fontWeight = FontWeight.Normal,
                         )
                     }
@@ -89,19 +91,19 @@ fun SingleProductCard(
                 Text(
                     text = productInfo.address,
                     fontSize = 14.sp,
-                    color = Color(0xff868C93),
+                    color = TextGray,
                     fontWeight = FontWeight.Normal,
                 )
                 Text(
                     text = "·",
                     fontSize = 14.sp,
-                    color = Color(0xff868C93),
+                    color = TextGray,
                     fontWeight = FontWeight.Normal,
                 )
                 Text(
                     text = productInfo.timePast,
                     fontSize = 14.sp,
-                    color = Color(0xff868C93),
+                    color = TextGray,
                     fontWeight = FontWeight.Normal,
                 )
             }
@@ -115,7 +117,7 @@ fun SingleProductCard(
                     modifier = Modifier
                         .padding(end = 3.dp)
                         .background(
-                            color = Color(0xff1fa174),
+                            color = ReservedGreen,
                             shape = RoundedCornerShape(3.dp)
                         )
                         .padding(horizontal = 4.dp, vertical = 3.dp)
@@ -151,7 +153,7 @@ fun SingleProductCard(
                     Text(
                         text = productInfo.likes.toString(),
                         fontSize = 14.sp,
-                        color = Color(0xff868c93)
+                        color = TextGray
                     )
                 }
             }

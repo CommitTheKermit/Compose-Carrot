@@ -14,7 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
+import com.example.composecarrot.ui.theme.BorderGray
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
@@ -32,7 +32,7 @@ fun SingleTagComboBox(
         modifier = Modifier
             .clip(RoundedCornerShape(50.dp))
             .border(
-                color = Color(0xffEAEBEF),
+                color = BorderGray,
                 width = 1.dp,
                 shape = RoundedCornerShape(50.dp),
             )

@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
+import com.example.composecarrot.ui.theme.DividerGray
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -29,7 +30,7 @@ fun BottomNavigationBar(navItems: List<BottomNavItem>) {
         modifier = Modifier
             .drawBehind {
                 drawLine(
-                    color = Color(0xFFE0E0E0),
+                    color = DividerGray,
                     start = Offset(0f, 0f),
                     end = Offset(size.width, 0f),
                     strokeWidth = 1.dp.toPx()

@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.example.composecarrot.ui.theme.DividerLight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.composecarrot.R
@@ -139,7 +140,7 @@ fun ProductListScreen(modifier: Modifier = Modifier) {
             LazyColumn {
                 items(productList.size) { index ->
                     if (index > 0) HorizontalDivider(
-                        color = Color(0xfff4f5f7),
+                        color = DividerLight,
                         thickness = 1.dp
                     )
                     SingleProductCard(productInfo = productList[index])
