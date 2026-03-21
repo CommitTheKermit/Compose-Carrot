@@ -1,4 +1,4 @@
-package com.example.composecarrot.ui.tagList
+package com.example.composecarrot.ui.taglist
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border

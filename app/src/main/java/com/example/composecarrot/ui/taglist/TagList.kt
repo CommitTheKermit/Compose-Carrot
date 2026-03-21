@@ -5,8 +5,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.composecarrot.ui.tagList.RefreshButton
-import com.example.composecarrot.ui.tagList.SingleTagComboBox
+import com.example.composecarrot.ui.taglist.RefreshButton
+import com.example.composecarrot.ui.taglist.SingleTagComboBox
 
 @Composable
 fun TagList(modifier: Modifier = Modifier) {
